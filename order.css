@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:  #E3dbdb;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-column-gap: 8px;
+   margin: 0px 16px 0px 16px;
+   grid-row-gap: 8px;
+   color: #231b1b;
+   font-family: 'Arima', cursive;
+}
+
+
+.carcont{
+    background-color:#6B5252;
+    grid-column-end:span 3;
+    height: 17rem;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #E3dbdb;
+    overflow: hidden;
+}
+
+.carcont button
+{
+    height:2.5rem ;
+    width:6rem ;
+    font-size: 1rem;
+    background-color:#E3dbdb ;
+    border: none;
+    color: #231b1b;
+    border-radius: 3px;
+    font-family: 'Arima',cursive;
+}
+
+.carcont img
+{
+    height: 125px; ;
+}
+
+#sedanimg
+{
+    width: 13rem;
+}
+
+.slidecont
+{
+    height: 17rem;
+    grid-column: 1/9;
+    display: grid;
+    column-gap: 16px;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+.slidebutton
+{
+   background-color:#6B5252 ;
+   border-radius: 10px;
+   opacity: .8;
+}
+
+#container
+{
+    display: none;
+    height:100%;
+    width: 100%;
+    background-color:rgb(151, 151, 151,0.7);
+    position: fixed;
+    z-index: 1;
+    padding: 24px;
+}
+
+
+#boximg
+{
+    height:280px;
+    width: 440px;
+}
+
+@media only screen and (max-width: 1074px) {
+    .carcont {
+        grid-column-end:span 4;
+    }
+  }

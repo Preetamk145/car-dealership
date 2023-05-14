@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>car dealership</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima&family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body>
+   <div id="nav">
+     <h1>Delux Dealer</h1>
+        <a href="order.html" style="grid-column:4/5 ;" onmouseover="hov(0)" onmouseleave="nhov(0)"> Order <hr></a>
+        <a  onmouseover="hov(1)" onmouseleave="nhov(1)" onclick="login()">Login <hr></a>
+   </div>
+
+   <div id="login" style="height:100% ;width: 100%;position: fixed;z-index:1; background-color :rgb(100, 99, 99,.5);display: none;justify-content: space-around;align-items: center;">
+     <div style="background-color:#e3dbdb;width: 40%;height: 93%;border-radius: 10px;display: flex;flex-direction: column;justify-content:space-around;align-items: center;color: #231b1b;">
+      <button id="close"  style="position: fixed;right: 30%;top:4%; background-color:transparent;border: none;z-index: 2;"><img src="images/close.png" alt=""></button>
+      <span style="text-align: center;"><h1>DELUX DEALER </h1>
+     <b >Login to book your car</b></span>
+     <div style="display:flex ;flex-direction: column;"> 
+      <label> User ID</label>
+      <input type="text" style="width:15rem ;height: 2rem;border-radius:4px;border: 1px solid #6b5252" placeholder="   John_kieth"><br>
+      <label> Password</label>
+      <input type="password" style="width:15rem ;height: 2rem;border-radius:4px;border: 1px solid #6b5252">
+     </div>
+     <div style="text-align:center;margin-bottom: 5px;">
+      <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;"> Sign in</button><br>
+      <em >OR</em><br>
+      <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;" onclick="signup()">Sign Up</button></div>
+      </div>
+
+   </div>
+
+   <div id="signup" style="height:100% ;width: 100%;position: fixed;z-index:1; background-color :rgb(100, 99, 99,.5);display: none;justify-content: space-around;align-items: center;">
+      <div style="width: 90%;height: 93%;border-radius: 10px;display: flex;flex-direction: row;align-items: center;color: #231b1b;">
+       <img src="images/signup.jpg" alt="" width="30%" height="100%" style="border-radius: 10px 0px 0px 10px ;">
+       <div style="background-color:#e3dbdb;height: 100%;width: 100%;padding:0 2rem 2rem 2rem ;display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 2fr 1fr 1fr fr 2fr;border-radius: 0px 10px 10px 0px;">
+        <button id="close1"  style="position: fixed;right: 5%;top:5%; background-color:transparent;border: none;z-index: 2;"><img src="images/close.png" alt=""></button>
+            <h2 style="text-align: center;grid-column: span 2;">Sign Up</h2>
+            <span><label for="">Name</label><br>
+            <input type="text"></span>
+            <span><label for="">Email</label><br>
+            <input type="text"></span>
+            <span><label for="">Adhaar Number</label><br>
+            <input type="text"></span>
+            <span><label for="">Licence Number</label><br>
+            <input type="text"></span>
+            <span style="grid-column: span 2;"><label for="">Address</label><br>
+            <input type="text" style="width: 95%;"></span>
+            <span style="grid-column: span 2; "><label > Upload Licence image</label><br>
+            <div style="width:240px;height:160px;border:1px solid black;"><img width="240px" height="160px" src="" alt="" id="image"></div><input style="border: none;" type="file" id="iimage" accept="image/*" ></span>
+            <span style="grid-column: span 2;text-align: center;"><button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px; ">Sign Up</button></span>
+            
+      </div>    
+      </div>
+   </div>
+
+  <div style="grid-column:1/9;height: 22em;" id="slidecont">
+        <div class="slide" style="background-color:#6b5252;color:#fefcff;border-radius:20px;display: none;">
+         <span > <p style="margin: 16px;text-align: center;"><br><b style="font-size:2rem ;">ON SALE</b><br> Hyundai Creta is a 5 seater SUV available in a price range of Rs. 10.44 - 18.24 Lakh. <br> It is available in 27 variants, 3 engine options that are BS6 compliant <ul><li>17.5 milleage</li><li>front wheel drive</li><li>2 air bags</li></ul> </p></span>
+          <div style="grid-column: 2/3;grid-row: 1/3;text-align: center;"><img src="images/suv_1.png" height="240px" alt="" ></div>
+          <div style="text-align:center ;"><button onclick="bk()" style="padding:15px 32px;font-size: 1.3rem;background-color:#b09d8d ;border: none;color: #231b1b;border-radius: 5px;">Book</button></div>
+        </div>
+        <div class="slide" style="background-color:#6b5252;color:#fefcff;border-radius:20px;display: none;">
+          <span > <p style="margin: 8px;text-align: center;overflow: hidden;"><br><b style="font-size:2rem ;">ON SALE</b><br> The Fiesta is powered by a 1.5 litre diesel engine with produces 91bhp along with a peak torque of 2015Nm. <br> The engine is mated to a 5-speed manual gearbox  <ul><li>Manual</li><li>430 liters boot space</li><li>2 air bags</li></ul> </p></span>
+          <div style="grid-column: 2/3;grid-row: 1/3;text-align: center;"><img src="images/hatchback_1.png" height="240px" alt="" ></div>
+          <div style="text-align:center ;"><button onclick="bk()" style="padding:15px 32px;font-size: 1.3rem;background-color:#b09d8d ;border: none;color: #231b1b;border-radius: 5px;">Book</button></div>
+        </div>
+        <div class="slide" style="background-color:#6b5252;color:#fefcff;border-radius:20px;display: none;">
+          <span> <p style="margin: 16px;text-align: center;overflow: hidden;"><br><b style="font-size:2rem ;">ON SALE</b><br>   Volkswagen Golf GTI remains our top-ranked sport compact car, masterfully blending performance with practicality.<ul><li>20.7 lakhs</li><li>0-100 in 18.64 seconds</li><li>16.34-mileage</li></ul> </p></span>
+          <div style="grid-column: 2/3;grid-row: 1/3;text-align: center;"><img src="images/hatchback_2.png" height="240px" alt="" ></div>
+          <div style="text-align:center ;"><button onclick="bk()" style="padding:15px 32px;font-size: 1.3rem;background-color:#b09d8d ;border: none;color: #231b1b;border-radius: 5px;">Book</button></div>
+        </div>
+        <div class="slide" style="background-color:#6b5252;color:#fefcff;border-radius:20px;display: none;">
+          <span> <p style="margin: 16px;text-align: center;overflow: hidden;"><br><b style="font-size:2rem ;">ON SALE</b><br>The all-new BMW M2 Competition gets an inline 6, 3-litre, twin-turbocharged engine that makes a whopping 405 bhp of peak power and 550 Nm of rear torque<ul><li>81 lakhs</li><li>8-Airbags</li><li>10.6-mileage</li></ul> </p></span>  
+          <div style="grid-column: 2/3;grid-row: 1/3;text-align: center;"><img src="images/sedan_6.png" height="240px" alt="" ></div>
+          <div style="text-align:center ;"><button onclick="bk()" style="padding:15px 32px;font-size: 1.3rem;background-color:#b09d8d ;border: none;color: #231b1b;border-radius: 5px;">Book</button></div>
+        </div>
+  </div> 
+  <div style="grid-column:1/9;height: 1.5rem;text-align: center;padding: .25rem; ">
+      <button class="slidebutton" onclick="myLoop(1)"></button>
+      <button class="slidebutton" onclick="myLoop(2)"></button>
+      <button class="slidebutton" onclick="myLoop(3)"></button>
+      <button class="slidebutton" onclick="myLoop(4)"></button>
+  </div>
+  <div style="grid-column: 1/9;"><h1 style="text-align: center;padding-top: 16px;"> DELUX DEALER PROMISES YOU</h1></div>
+  <div style="grid-column:1/9 ;display:grid;grid-template-columns: 1fr 1fr 1fr;;border-radius: 20px;">
+    <div style="text-align: center;padding:24px 32px 24px 32px;display: flex;flex-direction: column;justify-content: space-around;align-items: center;"><img src="images/test drive.png" alt="" width="60px"> Test Drive <br> Upto 5 KM </div>
+    <div style="text-align: center;padding:24px 32px 24px 32px;display: flex;flex-direction: column;justify-content: space-around;align-items: center;"><img src="images/delivery.png" alt="" width="60px"> Quick Delivery <br> Within 15 days of booking   </div>
+    <div style="text-align: center;padding:24px 32px 24px 32px;display: flex;flex-direction: column;justify-content: space-around;align-items: center;"><img src="images/registration.png" alt="" width="60px"> Easy registration <br> Get your car delivered in 2 visit </div>
+  </div>
+  <div style="grid-column: 1/9;height:2rem;"></div>
+  <div class="contus" style="grid-column:1/9 ; text-align: center;padding: 1rem;border-radius:10px 10px 0px 0px;"> <h2 style="margin: none;">Contact us</h2></div>
+  <div class="contus" style="grid-column: 1/9; display: flex;flex-direction: row;justify-content: space-around;padding-top:16px ;"> 
+    <div class="contus" style="height: 9rem;text-align: center;padding: 2rem;"><img src="images/location.png" alt=""><br> address <br> Lorem ipsum dolor sit amet <br>374637</div>
+    <div class="contus" style="height: 9rem;text-align: center;padding: 2rem;"><img src="images/mail.png" alt=""><br> email <br> bdfadvskabc@gmail.com</div>
+    <div class="contus" style="height: 9rem;text-align: center;padding: 2rem;"><img src="images/phone.png" alt=""><br> phone number <br> 1233456781</div>
+    <div class="contus" style="height: 9rem;text-align: center;padding: 2rem;"><img src="images/whatsapp.png" alt=""><br> whattsapp <br> 645417438</div>
+  </div>
+  <div style="grid-column:1/9;height:4rem;background-color:#6b5252;"></div>
+    <script src="index.js"></script>
+    <!--#231b1b  #6B5252 #E3dbdb -->
+  </body>
+</html>

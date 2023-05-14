@@ -1,0 +1,120 @@
+body {
+    background-color:  #E3dbdb;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-column-gap: 6px;
+   margin: 0px 8px 0px 8px;
+   color: #231b1b;
+   font-family: 'Arima', cursive;
+   box-sizing: border-box;
+}
+#nav
+{
+  grid-column: 1/ 9;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  box-shadow: -3px -3px 16px -3px rgba(0,0,0,0.1);
+  margin: 8px;
+  
+}
+#nav h1{
+    grid-column: 1/ 4;
+    text-align: center;
+    font-family: 'Bebas Neue',cursive;
+    font-size: 2.5rem;
+    margin: 8px;
+  }
+#nav span
+  {
+    grid-column: 6;
+   padding: 16px;
+   text-align: center;
+   color:#231b1b;
+   text-decoration: none;
+   font-size: 1.2rem;
+   margin-right:1rem;
+  }
+#options
+{
+   grid-column: 1/ 3;
+   display: flex;
+   flex-direction: column;
+   height: 80vh;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+    
+}
+#options button
+{
+    color: black;
+    padding: .7rem;
+    width: 100%;
+    margin: .2rem;
+    text-align: center;
+    font-family: inherit;
+    border:0;
+    background-color:  #E3dbdb;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#options button:hover
+{
+  background-color: #6B5252;
+  color: aliceblue;
+}
+
+#cars,#orders
+{
+  background-color: #6B5252;
+  grid-column: 3/9;
+  margin: 8px;
+  border-radius: 8px;
+  height: max-content;
+ 
+}
+#cars div,#orders div{
+  display: grid;
+  grid-template-columns: .3fr 1fr;
+}
+#cars h1 ,#orders h1{
+  color: aliceblue;
+  text-align: center;
+  margin: 0;
+  padding: .5rem;
+}
+
+#cars h3 ,#orders h3{
+  color: aliceblue;
+  margin: 0;
+  padding: .5rem 2rem;
+  grid-column: 1/3;
+}
+
+#cars div label,#orders div label{
+ padding: .75rem;
+ color: aliceblue;
+}
+#cars div input,#orders div input
+{
+  margin: .15rem;
+  height:2rem;
+  width: 80%;
+  border-radius: 7px;
+  border: 0;
+}
+
+#cars div button ,#orders div button{
+  grid-column: 2;
+  align-items: center;
+  width: 10rem;
+  height: 2.5rem; 
+  background-color:lavenderblush;
+  border-radius: 7px;
+  margin-left:25% ;
+  color: #6B5252;
+  font-family: inherit;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}

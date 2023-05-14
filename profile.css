@@ -1,0 +1,30 @@
+body {
+    background-color:  #E3dbdb;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-column-gap: 8px;
+   margin: 0px 16px 0px 16px;
+   color: #231b1b;
+   font-family: 'Arima', cursive;
+}
+
+*{
+  box-sizing: border-box;
+}
+h1
+{
+  grid-column: 2/ 9;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+}
+
+#details ,#order{
+    background-color: #6B5252;
+  grid-column: 1/9;
+  margin: 8px;
+  border-radius: 8px;
+  height: max-content;
+  color:aliceblue;
+  text-align: center;
+}

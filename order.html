@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Order</title>
+</head>
+<body>
+  <button  style="grid-column: 1/2; background-color:transparent;border: none;z-index: 2;" onclick="history.back()"><img src="images/back.png" alt=""></button>
+   <h1 style="grid-column: 2/9;padding: 1rem;text-align: center; font-family: 'Bebas Neue', cursive;font-size: 2.5rem;margin: 0px;">DELUX DEALER</h1>
+   <div style="grid-column:2/9 ;padding: 16px;font-size: 1.5rem;font-weight: bold;">SUV</div>
+   <div class="slidecont">
+    <a class="slidebutton" style="grid-column:1/2 ;padding: 6.5rem 0rem 6.5rem 1rem;" onclick="carBack(suv)"><img src="images/arrow_backword.png" alt=""></a>
+     <div class="carcont" id="suv1"> <img src="images/suv_1.png" alt="" ><span>Hyundai Venue</span><button onclick="openBox(`suv`,1,hyundaiVenue)">View</button></div>
+    <div class="carcont" id="suv2"> <img src="images/suv_2.png" alt="" ><span>Hyundai Kona</span><button onclick="openBox(`suv`,2,hyundaiKona)">View</button></div>
+    <div class="carcont" id="suv3"> <img src="images/suv_3.png" alt="" ><span>Audi Q3</span><button onclick="openBox(`suv`,3,audiQ3)">View</button></div>
+    <div class="carcont" id="suv4"> <img src="images/suv_4.png" alt="" ><span>Jeep Compass</span><button onclick="openBox(`suv`,4,jeepCompass)">View</button></div>
+    <div class="carcont" id="suv5"> <img src="images/suv_5.png" alt="" ><span>Toyota LandCruiser</span><button onclick="openBox(`suv`,5,toyotaLandCruiser)">View</button></div>
+    <div class="carcont" id="suv6"> <img src="images/suv_6.png" alt="" ><span>Toyota RAV4</span><button onclick="openBox(`suv`,6,toyotaRAV4)">View</button></div>
+   <a class="slidebutton" style="grid-column:14/15 ;padding: 6.5rem .5rem;" onclick="carFront(suv)"><img src="images/arrow_forward.png" alt=""></a>
+   </div>
+   <div style="grid-column:2/9 ;padding: 16px;font-size: 1.5rem;font-weight: bold;">Hatchback</div>
+   <div class="slidecont">
+    <a class="slidebutton" style="grid-column:1/2 ;padding: 6.5rem 0rem 6.5rem 1rem;" onclick="carBackH(hb)"><img src="images/arrow_backword.png" alt=""></a>
+    <div class="carcont" id="hb1"> <img src="images/hatchback_1.png" alt=""><span>Ford Fiesta</span><button onclick="openBox(`hatchback`,1,fordFiesta)">View</button></div>
+   <div class="carcont" id="hb2"> <img src="images/hatchback_2.png" alt=""><span>Volkswagon GTI</span><button onclick="openBox(`hatchback`,2,volkswagongti)">View</button></div>
+   <div class="carcont" id="hb3"> <img src="images/hatchback_3.png" alt=""><span>Renault Kwid</span><button onclick="openBox(`hatchback`,3,renaultKwid)">View</button></div>
+   <div class="carcont" id="hb4"> <img src="images/hatchback_4.png" alt=""><span>Hyundai i30n</span><button onclick="openBox(`hatchback`,4,hyundaii30n)">View</button></div>
+   <div class="carcont" id="hb5"> <img src="images/hatchback_5.png" alt=""><span>Tata Altroz</span><button onclick="openBox(`hatchback`,5,tataAltroz)">View</button></div>
+  <a class="slidebutton" style="grid-column:14/15 ;padding: 6.5rem .5rem;" onclick="carFrontH(hb)"><img src="images/arrow_forward.png" alt=""></a>
+   </div>
+   <div style="grid-column:2/9 ;padding: 16px ;font-size: 1.5rem;font-weight: bold;">Sedan</div>
+   <div class="slidecont">
+    <a class="slidebutton" style="grid-column:1/2 ;text-align: center;padding: 6.5rem 0rem 6.5rem 1rem;" onclick="carBack(sedan)"><img src="images/arrow_backword.png" alt=""></a>
+     <div class="carcont" id="sedan1"> <img id="sedanimg" src="images/sedan_1.png" alt=""><span>BMW 5 series</span><button onclick="openBox(`sedan`,1,bmw5)">View</button></div>
+    <div class="carcont" id="sedan2"> <img id="sedanimg" src="images/sedan_2.png" alt=""><span>Mercedes E-class</span><button onclick="openBox(`sedan`,2,mercedesEClass)">View</button></div>
+    <div class="carcont" id="sedan3"> <img id="sedanimg" src="images/sedan_3.png" alt=""><span>Jagaur XF</span><button onclick="openBox(`sedan`,3,jaguarXF)">View</button></div>
+    <div class="carcont" id="sedan4"> <img id="sedanimg" src="images/sedan_4.png" alt=""><span>Honda Accord</span><button onclick="openBox(`sedan`,4,hondaAccord)">View</button></div>
+    <div class="carcont" id="sedan5"> <img id="sedanimg" src="images/sedan_5.png" alt=""><span>Audi A3</span><button onclick="openBox(`sedan`,5,audiA3)">View</button></div>
+    <div class="carcont" id="sedan6"> <img id="sedanimg" src="images/sedan_6.png" alt=""><span>BMW M2</span><button onclick="openBox(`sedan`,6,bmwM2)">View</button></div>
+   <a class="slidebutton" style="grid-column:14/15 ;padding: 6.5rem .5rem;" onclick="carFront(sedan)"><img src="images/arrow_forward.png" alt=""></a>
+   </div>
+   <div id="container">
+     <div style="height:100% ;width:auto;background-color: #E3dbdb;border-radius: 10px;display: grid;grid-template-columns:4fr 4fr .4fr;grid-template-rows: 1.5fr 4fr 2fr 1fr;">
+      <a id="close" style="grid-column: 3/4;grid-row:1/2;text-align: center; "><img src="images/close.png" alt=""height="35px"></a>  
+      <div style="background-color: #6B5252;color:  #E3dbdb;border-radius: 10px;grid-column:2/3 ;grid-row:2/4 ;display:grid;padding: 24px;grid-template-rows: repeat(4, 1fr) ;place-content: center;">
+        <h2 id="carname" style=" text-align: center; margin: 0px;"></h2>
+        <div id="cardes"></div>
+        <div style="padding: 24px;display: flex;justify-content:space-evenly;"><button style="height: 2.5rem; width: 7rem;background-color:#E3dbdb ;border: none;border-radius: 5px;font-family: 'Arima',cursive;font-size: 1.1rem;">Book</button><button  style="height: 2.5rem; width: 7rem;background-color:#E3dbdb ;border: none;border-radius: 5px;font-family: 'Arima',cursive;font-size: 1.1rem;">Description</button></div>
+      </div>
+       <div style="grid-column:1/2 ;grid-row:2/3 ;text-align: center;padding: 16px;display: grid;grid-template-rows: 5fr 2fr;"><img id="boximg" src="images/suv_1.png" alt="" ><span><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></span></div>
+     </div>
+   </div>
+   <div style="grid-column: 1/9;height: 3rem;"></div>
+  
+    <script src="order.js"></script>
+</body>
+</html>
