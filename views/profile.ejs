@@ -11,15 +11,18 @@
     <title>Document</title>
 </head>
 <body>
-    <button  style="grid-column: 1/2; background-color:transparent;border: none;z-index: 2;" onclick="history.back()"><img src="images/back.png" alt=""></button>
-    <h1>Delux Dealer</h1>
+    <button  style="grid-column: 1/2; background-color:transparent;border: none;z-index: 2;height:10px;padding-top: 5px;text-align: left;" onclick="history.back()"><img src="images/back.png" alt=""></button>
+    <h1 style="padding-right: 10%;">Delux Dealer</h1>
     <div id="details">
-        <h2>HI name</h2>
+        <h2>HI <%= user.name %></h2>
         <h3>details</h3>
     </div>
     <div id="order">
         <h2>Orders</h2>
-
     </div>
+    <br>
+    <form action="/logout?_method=DELETE" method="POST" style="grid-column: 4/6;text-align: center;">
+    <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;">Logout</button>
+    </form>
 </body>
 </html>

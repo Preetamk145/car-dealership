@@ -255,6 +255,10 @@ function openBox(type,num,name)
         };
 }
 
+function book() {
+    alert("Details will be updated in your profile");
+
+}
 
 close.onclick = function() {
     box.style.display="none";

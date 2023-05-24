@@ -118,3 +118,7 @@ body {
   font-weight: bolder;
   font-size: 1.1rem;
 }
+
+#orders{
+  display: none;
+}

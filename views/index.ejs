@@ -15,47 +15,58 @@
      <h1>Delux Dealer</h1>
         <a href="order.html" style="grid-column:4/5 ;" onmouseover="hov(0)" onmouseleave="nhov(0)"> Order <hr></a>
         <a  onmouseover="hov(1)" onmouseleave="nhov(1)" onclick="login()">Login <hr></a>
+        <a href="/profile"style="display:none" onmouseover="hov(2)" onmouseleave="nhov(2)" >Profile <hr></a>
    </div>
 
    <div id="login" style="height:100% ;width: 100%;position: fixed;z-index:1; background-color :rgb(100, 99, 99,.5);display: none;justify-content: space-around;align-items: center;">
-     <div style="background-color:#e3dbdb;width: 40%;height: 93%;border-radius: 10px;display: flex;flex-direction: column;justify-content:space-around;align-items: center;color: #231b1b;">
+     <form action="/login" id="loginF" method="POST" style="background-color:#e3dbdb;width: 40%;height: 93%;border-radius: 10px;display: flex;flex-direction: column;justify-content:space-around;align-items: center;color: #231b1b;">
       <button id="close"  style="position: fixed;right: 30%;top:4%; background-color:transparent;border: none;z-index: 2;"><img src="images/close.png" alt=""></button>
       <span style="text-align: center;"><h1>DELUX DEALER </h1>
      <b >Login to book your car</b></span>
+      <% if(messages.error){ %>
+      <%=messages.error  %>
+      <% } %>
+     
      <div style="display:flex ;flex-direction: column;"> 
       <label> User ID</label>
-      <input type="text" style="width:15rem ;height: 2rem;border-radius:4px;border: 1px solid #6b5252" placeholder="   John_kieth"><br>
+      <input type="email" style="width:15rem ;height: 2rem;border-radius:4px;border: 1px solid #6b5252" placeholder="   John_kieth" name="email"><br>
       <label> Password</label>
-      <input type="password" style="width:15rem ;height: 2rem;border-radius:4px;border: 1px solid #6b5252">
+      <input type="password" style="width:15rem ;height: 2rem;border-radius:4px;border: 1px solid #6b5252" name="password">
      </div>
      <div style="text-align:center;margin-bottom: 5px;">
-      <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;"> Sign in</button><br>
+      <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;" type="submit"> Sign in</button><br>
       <em >OR</em><br>
-      <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;" onclick="signup()">Sign Up</button></div>
+      <button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;" onclick="signup()" type="button">Sign Up</button></div>
       </div>
+    </form>
 
    </div>
 
    <div id="signup" style="height:100% ;width: 100%;position: fixed;z-index:1; background-color :rgb(100, 99, 99,.5);display: none;justify-content: space-around;align-items: center;">
       <div style="width: 90%;height: 93%;border-radius: 10px;display: flex;flex-direction: row;align-items: center;color: #231b1b;">
        <img src="images/signup.jpg" alt="" width="30%" height="100%" style="border-radius: 10px 0px 0px 10px ;">
-       <div style="background-color:#e3dbdb;height: 100%;width: 100%;padding:0 2rem 2rem 2rem ;display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 2fr 1fr 1fr fr 2fr;border-radius: 0px 10px 10px 0px;">
+       <div style="background-color:#e3dbdb;height: 100%;width: 100%;padding:0 2rem 2rem 2rem ;border-radius: 0px 10px 10px 0px;">
         <button id="close1"  style="position: fixed;right: 5%;top:5%; background-color:transparent;border: none;z-index: 2;"><img src="images/close.png" alt=""></button>
+            <form action="/register" id="signinp" method="POST" style="display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 2fr 1fr 1fr fr 2fr;padding-top: 7%;">
             <h2 style="text-align: center;grid-column: span 2;">Sign Up</h2>
             <span><label for="">Name</label><br>
-            <input type="text"></span>
+            <input type="text" name="name"></span>
             <span><label for="">Email</label><br>
-            <input type="text"></span>
+            <input type="email" name="email"></span>
             <span><label for="">Adhaar Number</label><br>
-            <input type="text"></span>
+            <input type="text" name="adhno"></span>
             <span><label for="">Licence Number</label><br>
-            <input type="text"></span>
+            <input type="text" name="licno"></span>
+            <span><label for="">Password</label><br>
+            <input type="password" name="pass" id="pass"></span>
+            <span><label for="">Confirm Password</label><br><span id="passwordMatchMessage" style="font-size: x-small;"></span>
+            <input type="password" name="cpass" id="cpass"></span>
             <span style="grid-column: span 2;"><label for="">Address</label><br>
-            <input type="text" style="width: 95%;"></span>
+            <input type="text" style="width: 95%;" name="add"></span>
             <span style="grid-column: span 2; "><label > Upload Licence image</label><br>
-            <div style="width:240px;height:160px;border:1px solid black;"><img width="240px" height="160px" src="" alt="" id="image"></div><input style="border: none;" type="file" id="iimage" accept="image/*" ></span>
-            <span style="grid-column: span 2;text-align: center;"><button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px; ">Sign Up</button></span>
-            
+            <input style="border: none;" type="file" id="iimage" accept="image/*" name="img" ></span>
+            <span style="grid-column: span 2;text-align: center;"><button style="padding:8px 24px;font-size: 1.2rem;background-color:#6b5252 ;border: none;color: #e3dbdb;border-radius: 5px;"type="button" id="submitButton" >Sign Up</button></span>
+          </form>
       </div>    
       </div>
    </div>
@@ -103,7 +114,20 @@
     <div class="contus" style="height: 9rem;text-align: center;padding: 2rem;"><img src="images/whatsapp.png" alt=""><br> whattsapp <br> 645417438</div>
   </div>
   <div style="grid-column:1/9;height:4rem;background-color:#6b5252;"></div>
-    <script src="index.js"></script>
+  <% if(messages.error){ %>
+  <script>
+    document.getElementById("login").style.display="flex";
+  </script>
+ <% } %>
+ <% if(user){ %>
+  <script>
+    document.getElementsByTagName('a')[1].style.display="none";
+    document.getElementsByTagName('a')[2].style.display="block";
+  </script>
+  <% } %>
+      
+  <script src="index.js"></script>
+    
     <!--#231b1b  #6B5252 #E3dbdb -->
   </body>
 </html>

@@ -1,7 +1,14 @@
 var i = 1;            
 var j=1;
+var islogin=false;
+
+const passwordInput = document.getElementById("pass");
+  const confirmPasswordInput = document.getElementById("cpass");
+  const passwordMatchMessage = document.getElementById("passwordMatchMessage");
+ const submitButton = document.getElementById('submitButton');
 
 var slides = document.getElementsByClassName("slide");
+
 
 
 function myLoop(j) {  
@@ -97,7 +104,6 @@ img1.addEventListener("change",function()
    const reader =new FileReader();
    reader.addEventListener("load" ,()=>{
       imgpath=reader.result;
-      document.getElementById("image").src=`${imgpath}`;
    });
    reader.readAsDataURL(this.files[0]);
 })
@@ -106,3 +112,23 @@ img1.addEventListener("change",function()
 {
    alert("login to book");
 }
+
+ // Add an event listener to the form submission
+  const form = document.getElementById("signinp");
+  submitButton.addEventListener('click', (event) => {
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    // Check if passwords match before submitting the form
+    if (password !== confirmPassword) {
+      event.preventDefault(); // Prevent form submission
+      passwordMatchMessage.textContent = 'Passwords do not match!';
+      passwordMatchMessage.style.color = 'red';
+    }
+    else
+    {
+      form.submit();
+    }
+  });
+
+ 
