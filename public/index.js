@@ -3,13 +3,11 @@ var j=1;
 var islogin=false;
 
 const passwordInput = document.getElementById("pass");
-  const confirmPasswordInput = document.getElementById("cpass");
-  const passwordMatchMessage = document.getElementById("passwordMatchMessage");
- const submitButton = document.getElementById('submitButton');
+const confirmPasswordInput = document.getElementById("cpass");
+const passwordMatchMessage = document.getElementById("passwordMatchMessage");
+const submitButton = document.getElementById('submitButton');
 
 var slides = document.getElementsByClassName("slide");
-
-
 
 function myLoop(j) {  
     i=j;    
@@ -41,7 +39,6 @@ function myLoop(j) {
         i=0;
     }
 }
-
 
 myLoop(1); 
 
@@ -95,7 +92,6 @@ function signup(){
    }
 }
 
-
 const img1=document.getElementById("iimage");
 var imgpath="";
 
@@ -113,7 +109,6 @@ img1.addEventListener("change",function()
    alert("login to book");
 }
 
- // Add an event listener to the form submission
   const form = document.getElementById("signinp");
   submitButton.addEventListener('click', (event) => {
     const password = passwordInput.value;
